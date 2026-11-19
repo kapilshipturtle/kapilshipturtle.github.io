@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapil Prajapati · Laravel & Shopify Developer</title>
+<meta name="description" content="Laravel and Shopify developer: Shopify app and webhook fixes, payment integrations (Stripe, Razorpay, PayPal), and bulk product import and sync. Fixed quote within 24 hours.">
+<style>
+:root{--bg:#fafaf8;--fg:#17181a;--muted:#5d6168;--card:#fff;--line:#e4e2dc;--accent:#0f6b4f;--accent-bg:#e5f3ed;--chip:#f1f0eb}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121315;--fg:#ececea;--muted:#a3a7ad;--card:#1b1d20;--line:#2e3135;--accent:#5fd0a6;--accent-bg:#16302a;--chip:#24272b}}
+:root[data-theme="dark"]{--bg:#121315;--fg:#ececea;--muted:#a3a7ad;--card:#1b1d20;--line:#2e3135;--accent:#5fd0a6;--accent-bg:#16302a;--chip:#24272b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 28px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 10px}
+h2{font-size:22px;margin:0 0 14px}
+.lead{font-size:19px;color:var(--muted);max-width:720px;margin:0 0 20px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);color:var(--fg);background:var(--card)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0b1f18}}
+section{padding:30px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:6px 0;color:var(--muted)}
+.card ul{margin:8px 0 0;padding-left:18px}
+.card li{margin:3px 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);border-radius:99px;padding:3px 10px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chip{font-size:13px;background:var(--chip);border-radius:99px;padding:3px 10px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.step b{display:block;margin-bottom:4px}
+.step b::before{counter-increment:s;content:counter(s) ". ";color:var(--accent)}
+a{color:var(--accent)}
+footer{padding:30px 0 50px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="tag">Laravel · Shopify · Payments</span>
+  <h1>Kapil Prajapati</h1>
+  <p class="lead">I fix and build the backend side of Shopify businesses: custom app and webhook problems, payment integrations, and bulk product sync. Four years building a multi-vendor marketplace app used by 3,000+ Shopify stores.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:kapil.shipturtle@gmail.com?subject=Project%20enquiry">Get a fixed quote in 24 hours</a>
+    <a class="btn" href="#work">See my work</a>
+  </div>
+</header>
+
+<section id="services">
+  <h2>What I can do for you</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Fix</span>
+      <h3>Shopify app &amp; webhook fixes</h3>
+      <p>Your custom or private app misses orders, double-processes webhooks, hits API rate limits, or breaks after a Shopify API version change.</p>
+      <ul><li>Root cause found from logs and data, not guesswork</li><li>Fix with tests, plus a short note on what changed</li></ul>
+    </div>
+    <div class="card">
+      <span class="tag">Build</span>
+      <h3>Payment integrations in Laravel</h3>
+      <p>Stripe (including Connect), Razorpay or PayPal: checkout, refunds, payouts and webhooks that are signed, de-duplicated and safe to retry.</p>
+      <ul><li>Money stored as integers, never floats</li><li>Totals reconciled against the provider's own report</li></ul>
+    </div>
+    <div class="card">
+      <span class="tag">Sync</span>
+      <h3>Bulk product import &amp; sync</h3>
+      <p>CSV/Excel or supplier feeds into Shopify through the GraphQL Admin API, for products, variants, inventory and metafields.</p>
+      <ul><li>Guards so a partial update can't wipe data</li><li>A per-row report of what failed and why</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Work you can check</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Shopify app</span>
+      <h3>Multi-vendor marketplace app</h3>
+      <p>Senior developer and team lead (8 developers) on <a href="https://apps.shopify.com/shipturtle">this public Shopify app</a>. Things I built:</p>
+      <ul>
+        <li>Bulk catalog import and edit on the GraphQL Admin API, up to ~400K rows per run</li>
+        <li>Shopify refunds, shipping refunds and discounts split back to each vendor's order and payout</li>
+        <li>Webhook sync that stays reliable under bulk load</li>
+        <li>Commission and payout engine; Stripe Connect vendor onboarding</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Live demo</span>
+      <h3>AI image billing app</h3>
+      <p>Laravel 12, Vue 3, Inertia and Tailwind on PostgreSQL. Users pay provider cost + 25%, with credit holds in a ledger.</p>
+      <ul>
+        <li>Signed webhooks with de-duplication and out-of-order handling</li>
+        <li>Idempotent retries; totals matched the provider's usage report exactly</li>
+      </ul>
+      <p><a href="https://image-studio-9pfp.onrender.com">Live demo</a> · <a href="https://github.com/kapilshipturtle/pixelforge-billing-app">Code on GitHub</a></p>
+    </div>
+    <div class="card">
+      <span class="tag">Jira app</span>
+      <h3>Context Pack</h3>
+      <p>A Jira app on Atlassian Forge (JavaScript) that checks a ticket against a team's Definition of Ready and packages its context for developers and AI coding tools.</p>
+      <p><a href="https://github.com/kapilshipturtle/context-pack">Code on GitHub</a></p>
+    </div>
+  </div>
+  <div class="chips">
+    <span class="chip">Laravel / PHP 8</span><span class="chip">Shopify GraphQL Admin API</span><span class="chip">Webhooks</span><span class="chip">Stripe Connect</span><span class="chip">Razorpay</span><span class="chip">PayPal</span><span class="chip">Vue 3 + TypeScript</span><span class="chip">MySQL / PostgreSQL</span><span class="chip">Redis queues</span><span class="chip">Docker</span>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><b>Tell me the problem</b>Email what's broken or what you need, with your store or repo details.</div>
+    <div class="step"><b>Fixed quote in 24 hours</b>A clear scope, price and timeline. No hourly surprises.</div>
+    <div class="step"><b>Build and test</b>Work on a development store or branch first, with tests.</div>
+    <div class="step"><b>Handover</b>Code plus a short note on what changed and how it was tested.</div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Kapil Prajapati</b> · Ahmedabad, India (IST) · available for part-time projects</p>
+  <p><a href="mailto:kapil.shipturtle@gmail.com">kapil.shipturtle@gmail.com</a> · <a href="https://www.linkedin.com/in/kapil-prajapati-214009195/">LinkedIn</a> · <a href="https://github.com/kapilshipturtle">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>
